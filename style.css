@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: gainsboro;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-color:rgba(29, 185, 212,1);
+}
+.fa.fa-times, .fa.fa-bars{
+    color: orangered;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+nav{
+    display: flex;
+    padding: 3% 8%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 70px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 30px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg,gold, #fb00ff, yellow);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.box{
+    color: #ffffff;
+    position: absolute;
+    top: 30%;
+    left:50px;
+}
+.box p{
+    color: rgb(209, 209, 198);
+    font-weight: 300;
+}
+.box h1{
+    font-size: 30px;
+}
+.box{
+    width: 60%;
+    overflow: hidden;
+
+}
+.box .text{
+    position: relative;
+    font-size: 70px;
+    font-weight: 600;
+}
+.box .text.second{
+    background: linear-gradient(90deg,gold, #fb00ff, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: txt 3s linear infinite;
+}
+
+@keyframes txt{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400px;
+    }
+}
+
+.box .text.second:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(29, 185, 212,1);
+    border-left: 3px solid rgb(28, 3, 255);
+    animation: animate 4s steps(15) infinite;
+}
+@keyframes animate {
+    40%,60%{
+        left: calc(100% + 5px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+.box p{
+    margin: 10px 0 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 30px;
+    background: linear-gradient(45deg,rgb(53, 50, 45),rgb(0, 217, 255),rgb(53, 50, 45));
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    left: 20px;
+    top: 0px;
+}
+.hero-btn:hover{
+    border: 1px solid white;
+    background: linear-gradient(45deg,rgb(15, 212, 247),rgb(53, 50, 45),rgb(29, 185, 212));
+    color: white;
+    
+    transition: 0.5s;
+}
+nav .fa{
+    display: none;
+}
+.images{
+    width: 25%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images .shape{
+    width: 150%;
+    height: 90%;
+}
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-60%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 30px;
+}
+
+.images:hover .Mypic{
+    left: 55%;
+}
+
+@media(max-width: 700px){ 
+    
+    .box{
+        top: 20%;
+    }
+    
+    .box h1{
+        font-size: 17px;
+    }
+    .box .text{
+        font-size: 29px;
+    }
+    .box{
+        width: 85%;
+    }
+    .box p{
+        margin: 40px 0px 20px 0px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background-image: linear-gradient(rgb(25, 92, 131),rgb(30, 187, 214),rgb(22, 0, 82));
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        display: none;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 10px;
+    }
+    .images{
+        width: 350px;
+        height: 350px;
+        bottom: 0;
+        right: 10px;
+    }
+    
+    .images .shape{
+        width: 90%;
+        height: 80%;
+    }
+    
+    .images img{
+        height: 100%;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: bottom 1s, left 1s;
+    }
+
+}
+
+ /* -------------------- ABOUT ME------------------------ */
+
+
+.about{
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+ }
+.about h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.about p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 40px;
+    line-height: 28px;
+}
+.abt{
+    width: 100%;
+    height: 70vh;
+}
+
+/* ---------------------- SKILLS ------------*/
+.skills{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+ }
+ .skills h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.skills p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 22px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.skill-col{
+    flex-basis: 31%;
+    background: rgba(29, 185, 212,0.7);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+} 
+.skill-col p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px;
+    line-height: 20px;
+
+}  
+.skill-col h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: white;
+}
+.skill-col:hover{
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0);
+}
+
+@media(max-width: 700px){
+    
+    .row{
+        flex-direction: column;
+    }
+    .abt{
+        height: 20vh; 
+    }
+    .about h1{
+        font-size: 25px;
+        padding-top: 60px;
+    }
+    .about p{
+        font-size: 12px;
+    }
+    .skills h1{
+        font-size: 25px;
+    }
+    .skills p{
+        font-size: 12px;
+    }
+    .services img{
+        height: 20vh;
+    }
+}
+
+/*------------------------- SERVICES------------------------*/
+
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.services h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.services p{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+.services img{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    justify-content: center;
+}
+
+
+/*--------------------- FOOTER ----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgb(53, 102, 235);
+    color: #fff;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+div.icons{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.footer a{
+    color: rgb(0, 4, 5);
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 18px 0;
+    text-decoration: none;
+    transition: 0.5s;
+}  
+.footer a:hover{
+    color: #ffa700;
+    margin: 0 15px;
+    cursor: pointer;
+    padding: 18px 0;
+    text-decoration: none;
+}   
+.fa-copyright{
+    color: rgb(253, 253, 253);
+}
+
+
+
+ /* -----------------ABOUT ME PAGE----------------------- */
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 17, 17, 0.5),rgba(105, 104, 104, 0.2)),url(image/abt.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.sub-header h1{
+    margin-top: 200px;
+    color: rgb(26, 131, 150);
+    font-size: 30px;
+}
+.about-me{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+.about-me h1{
+    font-weight: 600;
+    color: #ffa700;
+    margin-bottom: 10px;
+}
+.about-me p{
+    color: rgb(0, 0, 0);
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 700px){
+    
+    .sub-header{
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+    }
+    .sub-header h1{
+        margin-top: 220px;
+    }
+    .about-me{
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
